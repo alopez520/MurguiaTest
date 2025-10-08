@@ -10,5 +10,6 @@ Las tecnologías más importantes que debes utilizar son .NET (Back), JavaScript
 Debes implementarlo preferentemente en arquitectura MVC.
 Puedes utilizar un archivo de texto o csv como base de datos.
 
+Debes subir tus cambios a la rama con tu nombre de usuario para poder evaluarte (Ej: test_Alex35)
 
 ##Test update
