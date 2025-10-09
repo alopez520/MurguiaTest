@@ -1,0 +1,73 @@
+﻿@model List<YoabTest.Models.TaskModel>
+
+    @{
+        Layout = null;
+    }
+<h2>Lista de tareas</h2>
+
+<!-- Formulario para crear o editar tarea -->
+<form asp-action="CreateOrEdit" method="post" id="taskForm">
+    <input type="hidden" name="Id" /> <!-- para edición -->
+    <input name="Title" placeholder="Título" />
+    <textarea name="Description" placeholder="Descripción"></textarea>
+    <input name="Deadline" type="date" />
+    <label>
+        <input name="IsImportant" type="checkbox" /> Importante
+    </label>
+    <button type="submit">Guardar</button>
+</form>
+
+<hr />
+
+<!-- Lista de tareas -->
+<table>
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Completada</th>
+            <th>Fecha de entrega</th>
+            <th>Importante</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr class="@(task.IsCompleted ? "completed" : "") @(task.IsImportant ? "important" : "")">
+                <td>@task.Title</td>
+                <td>@task.Description</td>
+                <td>
+                    <form asp-action="ToggleComplete" method="post">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <button type="submit">✔</button>
+                    </form>
+                </td>
+                <td>
+                    <form asp-action="ToggleImportant" method="post">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <button type="submit">★</button>
+                    </form>
+                </td>
+                <td>
+                    <button onclick="editTask(@task.Id)">Editar</button>
+                    <form asp-action="DeleteConfirmed" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function editTask(id) {
+        // Aquí puedes rellenar el formulario con los valores de la fila
+        var row = document.querySelector(`tr td button[onclick='editTask(${id})']`).parentNode.parentNode;
+        document.querySelector('#taskForm input[name="Id"]').value = id;
+        document.querySelector('#taskForm input[name="Title"]').value = row.cells[0].innerText;
+        document.querySelector('#taskForm textarea[name="Description"]').value = row.cells[1].innerText;
+        // Si quieres, puedes rellenar la fecha y checkbox también
+    }
+</script>
