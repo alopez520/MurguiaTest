@@ -7,7 +7,7 @@
 
 <!-- Formulario para crear o editar tarea -->
 <form asp-action="CreateOrEdit" method="post" id="taskForm">
-    <input type="hidden" name="Id" /> <!-- para edición -->
+    <input type="hidden" name="Id" /> 
     <input name="Title" placeholder="Título" />
     <textarea name="Description" placeholder="Descripción"></textarea>
     <input name="Deadline" type="date" />
@@ -26,7 +26,7 @@
             <th>Título</th>
             <th>Descripción</th>
             <th>Completada</th>
-            <th>Fecha de entrega</th>
+            <th>Fecha limite</th>
             <th>Importante</th>
             <th>Acciones</th>
         </tr>
@@ -37,16 +37,17 @@
             <tr class="@(task.IsCompleted ? "completed" : "") @(task.IsImportant ? "important" : "")">
                 <td>@task.Title</td>
                 <td>@task.Description</td>
+                <td>@task.Deadline.ToString("dd-MM-yyyy")</td>
                 <td>
                     <form asp-action="ToggleComplete" method="post">
                         <input type="hidden" name="id" value="@task.Id" />
-                        <button type="submit">✔</button>
+                        <button type="submit">✅</button>
                     </form>
                 </td>
                 <td>
                     <form asp-action="ToggleImportant" method="post">
                         <input type="hidden" name="id" value="@task.Id" />
-                        <button type="submit">★</button>
+                        <button type="submit">🌟</button>
                     </form>
                 </td>
                 <td>
@@ -62,12 +63,11 @@
 </table>
 
 <script>
-    function editTask(id) {
-        // Aquí puedes rellenar el formulario con los valores de la fila
+    function editTask(id) 
+    { 
         var row = document.querySelector(`tr td button[onclick='editTask(${id})']`).parentNode.parentNode;
         document.querySelector('#taskForm input[name="Id"]').value = id;
         document.querySelector('#taskForm input[name="Title"]').value = row.cells[0].innerText;
-        document.querySelector('#taskForm textarea[name="Description"]').value = row.cells[1].innerText;
-        // Si quieres, puedes rellenar la fecha y checkbox también
+        document.querySelector('#taskForm textarea[name="Description"]').value = row.cells[1].innerText;    
     }
 </script>
