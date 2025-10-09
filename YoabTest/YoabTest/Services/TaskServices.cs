@@ -51,9 +51,9 @@ namespace YoabTest.Services
 
         public void Add(TaskModel task)
         {
-            var tasks = GetAll();
+            var tasks = GetAll(); //Asegura que cada tarea tenga un ID unico y consecutivo
             task.Id = tasks.Any() ? tasks.Max(
-                t => t.Id)+1 : 1;
+                t => t.Id)+1 : 1; //Si existen tareas toma el Id maximo y suma 1, de lo contrario asigna 1 como Id inicial
 
             var newLine = $"{task.Id},{task.Title},{task.Description},{task.IsCompleted},{task.IsImportant},{task.Deadline.ToString()}";
             File.AppendAllText(_filePath, $"{newLine}\n");
