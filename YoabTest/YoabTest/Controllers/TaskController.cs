@@ -66,9 +66,9 @@ namespace YoabTest.Controllers
         public IActionResult ToggleImportant(int id)
         {
             var task = _taskService.GetById(id);
-            if (task == null) return Json(new { success = false });
+            if (task == null) return Json(new { success = false }); //Pensado para AJAX, el frontend hace una peticion asincrona al aservidor sin recargar la pagina
 
-            task.IsImportant = !task.IsImportant;
+            task.IsImportant = !task.IsImportant; //Invierte el valor
             _taskService.Update(task);
 
             return Json(new { success = true });
