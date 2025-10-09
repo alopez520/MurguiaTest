@@ -1,0 +1,57 @@
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\bin\Debug\net8.0\TestToDoList.staticwebassets.endpoints.json
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\bin\Debug\net8.0\TestToDoList.exe
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\bin\Debug\net8.0\TestToDoList.deps.json
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\bin\Debug\net8.0\TestToDoList.runtimeconfig.json
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\bin\Debug\net8.0\TestToDoList.dll
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\bin\Debug\net8.0\TestToDoList.pdb
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\TestToDoList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\TestToDoList.AssemblyInfoInputs.cache
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\TestToDoList.AssemblyInfo.cs
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\TestToDoList.csproj.CoreCompileInputs.cache
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\TestToDoList.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\TestToDoList.RazorAssemblyInfo.cache
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\TestToDoList.RazorAssemblyInfo.cs
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\scopedcss\bundle\TestToDoList.styles.css
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\TestToDoList.dll
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\refint\TestToDoList.dll
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\TestToDoList.pdb
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\TestToDoList.genruntimeconfig.cache
+C:\Users\PC\OneDrive\Documentos\PROYECTO TAREAS\ToDoListApp\obj\Debug\net8.0\ref\TestToDoList.dll
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\bin\Debug\net8.0\TestToDoList.staticwebassets.endpoints.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\bin\Debug\net8.0\TestToDoList.exe
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\bin\Debug\net8.0\TestToDoList.deps.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\bin\Debug\net8.0\TestToDoList.runtimeconfig.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\bin\Debug\net8.0\TestToDoList.dll
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\bin\Debug\net8.0\TestToDoList.pdb
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.AssemblyInfoInputs.cache
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.AssemblyInfo.cs
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.csproj.CoreCompileInputs.cache
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.RazorAssemblyInfo.cache
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.RazorAssemblyInfo.cs
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.sourcelink.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\scopedcss\bundle\TestToDoList.styles.css
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.dll
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\refint\TestToDoList.dll
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.pdb
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\TestToDoList.genruntimeconfig.cache
+C:\Users\PC\OneDrive\Documentos\TestPaola\PaolaTest\TestToDoList\obj\Debug\net8.0\ref\TestToDoList.dll

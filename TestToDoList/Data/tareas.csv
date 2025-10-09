@@ -1,0 +1,3 @@
+Id,Titulo,Descripcion,Prioridad,Estatus,UsuarioAsignado,FechaCreacion
+1,Sesion de usuarios,Solicitar a su equipo registarse en el sitio web ToDoList. Faltan usuarios,Alta,En Proceso,alex@correo.com,2025-10-08T05:00:00.0000000-07:00
+2,Registro en sitio web,Me he registrado al sitio web ToDoList,Alta,Completada,paola@correo.com,2025-10-09T16:07:03.2540322-07:00

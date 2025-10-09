@@ -1,0 +1,4 @@
+Id,Nombre,Email,Password,Rol
+1,Admin,admin@correo.com,admin123,Admin
+2,Alex Fernandez,alex@correo.com,123456,Usuario
+3,Paola Vazquez,paola@correo.com,pao123,Usuario

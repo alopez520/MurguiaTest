@@ -1,0 +1,48 @@
+@model IEnumerable<TestToDoList.Models.Tarea>
+@{
+    var usuario = ViewBag.UsuarioFiltro as string;
+}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Lista de Tareas @(!string.IsNullOrEmpty(usuario) ? $" - Usuario: {usuario}" : "")</h2>
+    
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Prioridad</th>
+            <th>Estatus</th>
+            <th>Usuario</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var t in Model)
+        {
+            <tr>
+                <td>@t.Id</td>
+                <td>@t.Titulo</td>
+                <td>
+                    @if(t.Prioridad == "Alta"){ <span class="badge bg-danger">Alta</span> }
+                    else if(t.Prioridad == "Media"){ <span class="badge bg-warning text-dark">Media</span> }
+                    else { <span class="badge bg-secondary">Baja</span> }
+                </td>
+                <td>
+                    @if(t.Estatus == "Completada"){ <span class="badge bg-success">Completada</span> }
+                    else if(t.Estatus == "En Proceso"){ <span class="badge bg-info text-dark">En Proceso</span> }
+                    else { <span class="badge bg-light text-dark">Pendiente</span> }
+                </td>
+                <td>@t.UsuarioAsignado</td>
+                <td>@t.FechaCreacion.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" href="/Tareas/Details/@t.Id">Ver</a>
+                    <a class="btn btn-sm btn-warning" href="/Tareas/Edit/@t.Id">Editar</a>
+                    <a class="btn btn-sm btn-danger" href="/Tareas/Delete/@t.Id" onclick="return confirm('¿Eliminar esta tarea?');">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

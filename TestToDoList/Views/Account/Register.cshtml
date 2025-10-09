@@ -1,0 +1,87 @@
+﻿@* Vista de registro de usuarios *@
+@model TestToDoList.Models.Usuario
+@{
+    Layout = null; //El layout se anula en esta vista
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Registro </title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .register-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            padding: 2rem;
+            max-width: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="register-container">
+                    <h2 class="text-center mb-4">Registro de Usuario</h2>
+                    @* Aqui manejamos los errores *@
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">@ViewBag.Error</div>
+                    }
+
+                    @* El envio será por medio de POS al controlador *@ 
+                        <form method="post"> 
+                        <div class="mb-3">
+                            <label class="form-label">Nombre Completo</label>
+                            <input type="text" name="Nombre" class="form-control" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="Email" class="form-control" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" name="Password" class="form-control" required />
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Registrarse</button>
+                        <a href="/Account/Login" class="btn btn-outline-secondary w-100">Volver al Inicio</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<script>
+    //Notificaciones con JavaScript
+@if (ViewBag.Success != null)
+{
+            <text>
+            Swal.fire({
+                icon: 'success',
+                title: '¡Registro Exitoso!',
+                text: '@ViewBag.Success',
+                confirmButtonText: 'Ir al Inicio',
+                timer: 1000,
+                timerProgressBar: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/Account/Login';
+                }
+            });
+            </text>
+}

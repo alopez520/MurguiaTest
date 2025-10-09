@@ -1,0 +1,16 @@
+@model TestToDoList.Models.Tarea
+
+@* En el detalle solo se ven los datos, no se puede hacer otra acción *@
+<h2>Detalle de Tarea</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Titulo</h5>
+        <p class="card-text">@Model.Descripcion</p>
+        <p><strong>Prioridad:</strong> @Model.Prioridad</p>
+        <p><strong>Estatus:</strong> @Model.Estatus</p>
+        <p><strong>Usuario:</strong> @Model.UsuarioAsignado</p>
+        <p><strong>Creada:</strong> @Model.FechaCreacion.ToString("yyyy-MM-dd HH:mm")</p>
+        <a class="btn btn-secondary" href="/Tareas">Regresar</a>
+    </div>
+</div>

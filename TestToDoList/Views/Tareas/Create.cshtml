@@ -1,0 +1,51 @@
+@model TestToDoList.Models.Tarea
+
+<h2>Nueva Tarea</h2>
+
+<form method="post" class="row g-3">
+    <div class="col-12">
+        <label class="form-label">Título</label>
+        <input type="text" name="Titulo" class="form-control" required />
+    </div>
+    <div class="col-12">
+        <label class="form-label">Descripción</label>
+        <textarea name="Descripcion" class="form-control"></textarea>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Prioridad</label>
+        <select name="Prioridad" class="form-select">
+            <option>Alta</option>
+            <option selected>Media</option>
+            <option>Baja</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Estatus</label>
+        <select name="Estatus" class="form-select">
+            <option selected>Pendiente</option>
+            <option>En Proceso</option>
+            <option>Completada</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Usuario Asignado</label>
+        @if (User.IsInRole("Admin"))
+        {
+            <select name="UsuarioAsignado" class="form-select" required>
+                <option value="">Seleccionar usuario</option>
+                @foreach (var usuario in ViewBag.Usuarios)
+                {
+                    <option value="@usuario.Email">@usuario.Nombre</option>
+                }
+            </select>
+        }
+        else
+        {
+            <input type="text" name="UsuarioAsignado" value="@Model.UsuarioAsignado" class="form-control" readonly />
+        }
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <a class="btn btn-secondary" href="/Tareas">Cancelar</a>
+    </div>
+</form>
