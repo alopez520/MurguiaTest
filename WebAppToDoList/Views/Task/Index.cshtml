@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+@* <h1>Index</h1> *@
+
+@* Modal - Agregar *@
+<div class="d-flex justify-content-between">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#miModalAdd">Agregar</button>
+    <div>
+        <form id="searchForm" class="search-bar position-relative mx-auto" style="max-width: 400px;">
+            <input id="searchInput"
+                   class="form-control ps-5 rounded-pill border-0 shadow-sm"
+                   type="search"
+                   placeholder="Buscar..."
+                   aria-label="Buscar"
+                   name="data"
+                   style="border: 2px solid #ff69b4; background-color: #D4D4D4; ">
+            <span class="position-absolute top-50 start-0 translate-middle-y ps-3 text-muted">
+                <i class="bi bi-search"></i>
+            </span>
+        </form>
+    </div>
+</div>
+<div class="modal" id="miModalAdd" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Nueva Tarea</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    <form id="formUsuario">
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Titulo</label>
+                            <input type="text" class="form-control" id="title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control" id="description" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Fecha Limite</label>
+                            <input type="date" class="form-control" id="duedate" required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button id="btnAdd" type="button" class="btn btn-success">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+@* Modal - Editar *@
+<div class="modal" id="miModalEdit" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Tarea</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    <form id="formUsuario">
+                        <input type="hidden" id="E_id" />
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Titulo</label>
+                            <input type="text" class="form-control" id="E_title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control" id="E_description" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Fecha Limite</label>
+                            <input type="date" class="form-control" id="E_duedate" required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button id="btnEdit" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+
+<div id="taskContainer" class="accordion"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

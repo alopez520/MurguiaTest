@@ -1,0 +1,7 @@
+Id,Title,Description,Important,Completed,DueDate
+1,AppToDo,Craer Aplicaion ToDoList,True,False,10/10/2025 00:00:00
+2,Buscador Nav,Agregar Nav con Buscador funcional,True,True,10/10/2025 00:00:00
+3,FechaValidation,"Agregar validaciones para la fecha, la fecha no puede ser menor a la actual, el campo fecha es obligatorio",True,True,10/10/2025 00:00:00
+4,CRUD,Terminar crud basico,True,True,10/10/2025 00:00:00
+8,x12,x2,False,True,10/25/2025 00:00:00
+10,este es un test para la fecha,x,False,True,10/09/2025 00:00:00
