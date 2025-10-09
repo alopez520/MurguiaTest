@@ -81,11 +81,23 @@ namespace YoabTest.Controllers
             return View(task);
         }
 
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         public IActionResult DeleteConfirmed(int id)
         {
             _taskService.Delete(id);
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpPost]
+        public IActionResult CreateOrEdit(TaskModel task)
+        {
+            if (task.Id == 0)
+                _taskService.Add(task);
+            else
+                _taskService.Update(task);
+
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
