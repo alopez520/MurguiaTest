@@ -3,6 +3,8 @@
     @{
         Layout = null;
     }
+
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true"/>
 <h2>Lista de tareas</h2>
 
 <!-- Formulario para crear o editar tarea -->
@@ -25,8 +27,8 @@
         <tr>
             <th>Título</th>
             <th>Descripción</th>
-            <th>Completada</th>
             <th>Fecha limite</th>
+            <th>Completada</th>
             <th>Importante</th>
             <th>Acciones</th>
         </tr>
@@ -45,10 +47,11 @@
                     </form>
                 </td>
                 <td>
-                    <form asp-action="ToggleImportant" method="post">
-                        <input type="hidden" name="id" value="@task.Id" />
-                        <button type="submit">🌟</button>
-                    </form>
+                    <button type="button"
+                            onclick="toggleImportant(@task.Id)"
+                            class="@(task.IsImportant ? "important" : "")">
+                        @(task.IsImportant ? "★ Importante" : "☆ Importante")
+                    </button>
                 </td>
                 <td>
                     <button onclick="editTask(@task.Id)">Editar</button>
@@ -61,5 +64,5 @@
         }
     </tbody>
 </table>
-
+    
     <script src="~/js/script.js"></script>
