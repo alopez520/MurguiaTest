@@ -63,8 +63,12 @@ namespace YoabTest.Controllers
         }
 
         [HttpPost]
-        public IActionResult ToggleImportant(int id)
+        public IActionResult ToggleImportant([FromBody] Dictionary<string, int> data)
         {
+            if(!data.ContainsKey("id"))
+                return Json(new { success = true });
+
+            int id = data["id"];
             var task = _taskService.GetById(id);
             if (task == null) return Json(new { success = false }); //Pensado para AJAX, el frontend hace una peticion asincrona al aservidor sin recargar la pagina
 

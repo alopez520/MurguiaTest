@@ -17,7 +17,7 @@
 
 async function toggleImportant(id) {
     try {
-        const reponse = await fetch(`/Task/ToggleImportant/${id}`, {
+        const response = await fetch(`/Task/ToggleImportant/${id}`, {
             method: "POST",
             headers: {
                 "X-Requested-With": "XMLHttpRequest",
@@ -27,11 +27,11 @@ async function toggleImportant(id) {
 
         const result = await response.json();
 
-        if (reponse.success) {
-            const button = document.querySelector(`button[onclick='toggleImportant(${id})']`); //Cambia el boton
+        if (result.success) {
+            const button = document.querySelector(`button[onclick='toggleImportant(${id})']`);
             if (button) {
-                const isNowImportant = button.buttonClassList.toggle("important");
-                button.textContent = isNowImportant ? "🌟 Importante" : "⭐";
+                const isNowImportant = button.classList.toggle("important");
+                button.textContent = isNowImportant ? "★ Importante" : "☆ Importante";
             }
         } else {
             console.error("Error al actualizar la importancia.");
