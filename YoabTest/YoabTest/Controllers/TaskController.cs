@@ -96,12 +96,6 @@ namespace YoabTest.Controllers
                 ModelState.AddModelError("Deadline", "La fecha limite no puede ser anterior a la de hoy");
             }
 
-            if (!ModelState.IsValid)
-            {
-                var tasks = _taskService.GetAll();
-                return View("Index", tasks);
-            }
-
             if (task.Id == 0)
                 _taskService.Add(task);
             else

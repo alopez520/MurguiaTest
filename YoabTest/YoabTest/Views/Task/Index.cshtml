@@ -12,7 +12,7 @@
     <input type="hidden" name="Id" /> 
     <input name="Title" placeholder="Título" />
     <textarea name="Description" placeholder="Descripción"></textarea>
-    <input name="Deadline" type="date" id="Deadline" min="@DateTime.Now.ToString("dd-MM-yyyy")" />
+    <input name="Deadline" type="date" id="Deadline" min="@DateTime.Now.ToString("yyyy-MM-dd")"/>
     <label>
         <input name="IsImportant" type="checkbox" /> Importante
     </label>
