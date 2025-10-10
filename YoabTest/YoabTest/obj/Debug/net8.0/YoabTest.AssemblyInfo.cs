@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YoabTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+132f0a4ec6ff420c1919384c32e298f3ce827801")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f9824c6f1251b4d42ba927709fc324689ea80f2")]
 [assembly: System.Reflection.AssemblyProductAttribute("YoabTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YoabTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

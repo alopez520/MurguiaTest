@@ -39,7 +39,9 @@
             <tr class="@(task.IsCompleted ? "completed" : "") @(task.IsImportant ? "important" : "")">
                 <td>@task.Title</td>
                 <td>@task.Description</td>
-                <td>@task.Deadline.ToString("dd-MM-yyyy")</td>
+                <td data-date="@task.Deadline.ToString("yyyy-MM-dd")">
+                    @task.Deadline.ToString("dd-MM-yyyy")
+                </td>
                 <td>
                     <form asp-action="ToggleComplete" method="post">
                         <input type="hidden" name="id" value="@task.Id" />

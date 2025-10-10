@@ -1,16 +1,15 @@
 ﻿function editTask(id) {
-    const button = document.querySelector(`button[onclick='editTask(${id})']`);
-    if (!button)
-        return;
-
-    const row = button.closest("tr");
-    if (!row)
-        return;
-
+    const row = document.querySelector(`tr td button[onclick='editTask(${id})']`).closest("tr");
+   
     document.querySelector('#taskForm input[name="Id"]').value = id;
-    document.querySelector('#taskForm input[name="Title"]').value = row.cells[0].innerText.trim();
+    document.querySelector('#taskForm input[name="Title"]').value = row.cells[0].innerText;
     document.querySelector('#taskForm textarea[name="Description"]').value = row.cells[1].innerText;
     document.querySelector('#taskForm button[type="submit"]').textContent = "Actualizar";
+
+    const dateText = row.cells[2].dataset.date;
+    if (dateText) {
+        document.querySelector('#taskForm input[name="Deadline"]').value = dateText;
+    }
 }
 
 async function toggleImportant(id) {
