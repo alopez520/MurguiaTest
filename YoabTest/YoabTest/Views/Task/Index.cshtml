@@ -62,12 +62,4 @@
     </tbody>
 </table>
 
-<script>
-    function editTask(id) 
-    { 
-        var row = document.querySelector(`tr td button[onclick='editTask(${id})']`).parentNode.parentNode;
-        document.querySelector('#taskForm input[name="Id"]').value = id;
-        document.querySelector('#taskForm input[name="Title"]').value = row.cells[0].innerText;
-        document.querySelector('#taskForm textarea[name="Description"]').value = row.cells[1].innerText;    
-    }
-</script>
+    <script src="~/js/script.js"></script>
