@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "199d9d31-117c-43ca-829c-8ef6036a1cbd",
+		"name": "TodoList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13346322"
+	},
+	"item": [
+		{
+			"name": "consultaTareas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Aprender EF Core\",\r\n  \"descripcion\": \"Practicar migraciones y CRUD\",\r\n  \"completada\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7293/api/tareas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7293",
+					"path": [
+						"api",
+						"tareas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creaTarea",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Aprender EF Core\",\r\n  \"descripcion\": \"Practicar migraciones y CRUD\",\r\n  \"completada\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7293/api/tareas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7293",
+					"path": [
+						"api",
+						"tareas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminaTarea",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7293/api/tareas/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7293",
+					"path": [
+						"api",
+						"tareas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultaTarea",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7293/api/tareas/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7293",
+					"path": [
+						"api",
+						"tareas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificaTarea",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"Completada\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7293/api/tareas/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7293",
+					"path": [
+						"api",
+						"tareas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizaTarea",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"Titulo\": \"Nuevo titulo ejemplo\",\r\n \"Descripcion\": \"Nueva descripcion ejemplo\",\r\n \"Completada\": true,\r\n \"Destacada\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7293/api/tareas/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7293",
+					"path": [
+						"api",
+						"tareas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

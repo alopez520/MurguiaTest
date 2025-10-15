@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server
+    container_name: downloads
+    ports:
+      - "1433:1433"
+    networks:
+      - app-network
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aspnet_app
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    depends_on:
+      - sqlserver
+    networks:
+      - app-network
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=TodoDB;User=sa;Password=StrongPassw0rd!;TrustServerCertificate=True;
+
+networks:
+  app-network:
+    driver: bridge
+    
+volumes:
+  sql_data:

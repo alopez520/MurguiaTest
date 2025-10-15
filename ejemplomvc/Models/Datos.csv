@@ -1,0 +1,12 @@
+Id,Titulo,Descripcion,Completada,Important,FechaCreacion
+1,Comprar frutas,Tengo que ir a comprar frutas al tianguis,False,True,10/15/2025 7:05:31 PM
+2,Enviar correo al jefe,Recordar enviar el informe semanal,True,True,10/15/2025 8:15:42 PM
+6,Pagar servicios,Pagar agua e internet antes del viernes,False,True,10/15/2025 6:00:00 PM
+9,Actualizar CV,Agregar la última experiencia laboral,False,True,10/12/2025 4:15:00 PM
+3,Llamar al doctor,Agendar cita para revisión médica,False,False,10/15/2025 9:00:00 PM
+4,Limpiar el patio,Barrer y sacar la basura del patio,True,False,10/14/2025 5:30:10 PM
+5,Leer un libro,Empezar a leer 'Cien años de soledad',False,False,10/13/2025 10:45:00 PM
+7,Revisar tareas de los niños,Ver que hayan hecho la tarea,False,False,10/15/2025 7:30:00 PM
+8,Hacer ejercicio,Salir a correr por 30 minutos,True,False,10/14/2025 6:45:00 AM
+10,Organizar escritorio,Limpiar papeles y organizar documentos,False,False,10/13/2025 2:00:00 PM
+11,Aprender EF Core,Practicar migraciones y CRUD,False,False,10/15/2025 9:03:14 PM
