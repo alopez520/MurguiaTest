@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "199d9d31-117c-43ca-829c-8ef6036a1cbd",
+		"_postman_id": "568cd74e-3898-455f-894b-67ad466d6462",
 		"name": "TodoList",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "13346322"
@@ -79,7 +79,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:7293/api/tareas/1",
+					"raw": "https://localhost:7293/api/tareas/4",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -88,7 +88,7 @@
 					"path": [
 						"api",
 						"tareas",
-						"1"
+						"4"
 					]
 				}
 			},
@@ -160,7 +160,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:7293/api/tareas/1",
+					"raw": "https://localhost:7293/api/tareas/2",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -169,7 +169,7 @@
 					"path": [
 						"api",
 						"tareas",
-						"1"
+						"2"
 					]
 				}
 			},
