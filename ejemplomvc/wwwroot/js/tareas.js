@@ -32,8 +32,9 @@
 
         tareasResponse.datos.forEach(tarea => {
             const tr = document.createElement('tr');
+            tr.setAttribute('data-id', tarea.id);
             if (tarea.destacada) {
-                tr.style.backgroundColor = "lightblue";
+                tr.classList.add('tarea-inportante');
             }
 
             const tdCheck = document.createElement('td');
@@ -150,7 +151,6 @@ btnGuardar.addEventListener('click', async () => {
     modal.style.display = 'none';
     document.getElementById('titulo').value = '';
     document.getElementById('descripcion').value = '';
-    cargarTareas();
 });
 
 function abrirModalEdicion(tarea) {
@@ -194,6 +194,7 @@ async function agregarEditarTarea(id) {
         const data = await addUpdateResponse.json();
         await closeLoading();
         if (!addUpdateResponse.ok) {
+            await cargarTareas();
             Swal.fire({
                 title: 'Error',
                 text: data.mensaje || "Ocurrió un error inesperado",
@@ -202,6 +203,7 @@ async function agregarEditarTarea(id) {
             return;
         } else {
             await cargarTareas();
+            scrollToTarea(id);
             Swal.fire({
                 title: 'Éxito',
                 text: data.mensaje,
@@ -275,11 +277,13 @@ async function detacarTarea(id, destacada) {
             return;
         } else {
             await cargarTareas();
-            Swal.fire({
+            scrollToTarea(id,true);
+            await Swal.fire({
                 title: 'Éxito',
                 text: data.mensaje,
                 icon: 'success',
             });
+            
         }
     } catch (error) {
         console.error('Error actualizando tarea:', error);
@@ -296,6 +300,18 @@ function showLoading() {
 }
 function closeLoading() {
     Swal.close();
+}
+
+function scrollToTarea(id,scroll) {
+    const fila = document.querySelector(`tr[data-id="${id}"]`);
+    if (fila && scroll) {
+        fila.scrollIntoView({
+            behavior: 'smooth',   
+            block: 'center'
+        });
+    }
+    fila.classList.add('resaltado');
+    setTimeout(() => fila.classList.remove('resaltado'), 1000);
 }
 
 cargarTareas();

@@ -9,35 +9,38 @@
 <body>
     <h1>Listado de Tareas</h1>
 
-    <div class="tabla-container">
-        <table id="tareasTable" border="1">
-            <thead>
-                <tr>
-                    <th class="col-min">Completada</th>
-                    <th>Título</th>
-                    <th>Descripción</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+    <div class="main-container">
+        <div class="tabla-container">
+            <table id="tareasTable" border="1">
+                <thead>
+                    <tr>
+                        <th class="col-min">Completada</th>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+
+        </div>
+        <button id="btnAgregar" class="btn-agregar">Agregar Tarea</button>
     </div>
 
-    <button id="btnAgregar" class="btn-agregar">Agregar Tarea</button>
 
-    <div id="modal">
-        <div id="modalContent">
-            <h3>Nueva Tarea</h3>
-            <input type="text" id="titulo" placeholder="Título">
-            <input type="text" id="descripcion" placeholder="Descripción">
-            <div class="modal-buttons">
-                <button id="guardarTarea">Guardar</button>
-                <button id="cerrarModal">Cancelar</button>
+        <div id="modal">
+            <div id="modalContent">
+                <h3>Nueva Tarea</h3>
+                <input type="text" id="titulo" placeholder="Título">
+                <input type="text" id="descripcion" placeholder="Descripción">
+                <div class="modal-buttons">
+                    <button id="guardarTarea">Guardar</button>
+                    <button id="cerrarModal">Cancelar</button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="js/tareas.js?v=2.0"></script>
+        <script src="js/tareas.js?v=2.0"></script>
 </body>
 </html>
